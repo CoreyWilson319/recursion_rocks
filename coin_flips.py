@@ -1,14 +1,32 @@
+from itertools import combinations
 # You will have to figure out what parameters to include
 # 🚨 All functions must use recursion 🚨`
 
 # This function returns an array of all possible outcomes from flipping a coin N times.
-# Input type: Integer 
+# Input type: Integer
 # H stands for Heads and T stands for tails
 # Represent the two outcomes of each flip as "H" or "T"
+coin = ["H", "T"]
+opposite_coin = ["H", "T"]
+
 
 def coin_flips(n):
-    # Write code here
-    pass
+    if n > 0:
+        results = []
+        for r in coin:
+            for o in opposite_coin:
+                results.append(r+o)
 
-# print(coinFlips(2)) 
+        coin_flips(n - 1)
+
+        return results
+
+
+print(coin_flips(2))
 # => ["HH", "HT", "TH", "TT"]
+
+
+# Notes
+
+# Only need to pass the amount of times to flip the coin
+# Maybe a loop that creates an element in a list with every possible combination of the amount of heads or tails
