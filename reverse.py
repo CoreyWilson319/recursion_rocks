@@ -3,15 +3,31 @@
 
 # Write a recursive function called `reverse` that accepts a ss and returns a reversed ss.
 
-def reverse(ss):
-    # Write code here
-    pass
+def reverse(ss, results = []):
+    # print the last letter every recursion?
+    ss = list(ss)
+    # print(ss)
+    if len(ss) == 1:
+        results.append(ss[0])
+        # print(', '.join(result))
+        print("1")
+        ', '.join(results)
+        return print(str(''.join(results)))
+    else:
+        results.append(ss[-1])
+        del ss[-1]
+        ', '.join(ss)
+        # print(ss)
+        print(results)
+    reverse(ss, results)
+
+            
 
 # print(reverse("")) 
 # => ""
 # print(reverse("a")) 
 # => "a"
-# print(reverse("ab")) 
+print(reverse("ab")) 
 # => "ba"
 # print(reverse("computer")) 
 # => "retupmoc"
