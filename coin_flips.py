@@ -1,4 +1,3 @@
-from itertools import combinations
 # You will have to figure out what parameters to include
 # 🚨 All functions must use recursion 🚨`
 
@@ -24,9 +23,3 @@ def coin_flips(n):
 
 print(coin_flips(2))
 # => ["HH", "HT", "TH", "TT"]
-
-
-# Notes
-
-# Only need to pass the amount of times to flip the coin
-# Maybe a loop that creates an element in a list with every possible combination of the amount of heads or tails

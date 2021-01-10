@@ -23,15 +23,15 @@ def pretty_print(dictionary, indent, counter=1):
 
 
 
-# o1 = {"a": 1, "b": 2}
-# o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
+o1 = {"a": 1, "b": 2}
+o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
 o3 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero", "friends": {
     "spiderman": {"name": "Peter Parker"}, "superman": {"name": "Clark Kent"}}}, "d": 4}
 
 print(len(o3))
 
-# print(pretty_print(o1, "-"))
-# print(pretty_print(o2, " "))
+print(pretty_print(o1, "-"))
+print(pretty_print(o2, " "))
 pretty_print(o3, "..")
 # ..a: 1
 # ..b: 2
